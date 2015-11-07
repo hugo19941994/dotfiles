@@ -1,0 +1,22 @@
+source .antigen.zsh
+
+antigen use oh-my-zsh
+antigen bundle git
+antigen bundle pip
+antigen bundle lein
+antigen bundle command-not-found
+antigen bundle vi-mode
+antigen bundle tarruda/zsh-autosuggestions
+antigen bundle horosgrisa/autoenv
+antigen bundle Tarrasch/zsh-bd
+antigen bundle felixr/docker-zsh-completion
+antigen bundle zsh-users/zsh-completions
+antigen bundle srijanshetty/zsh-pandoc-completion
+antigen bundle srijanshetty/zsh-pip-completion
+
+antigen theme minimal
+
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-history-substring-search
+
+antigen apply

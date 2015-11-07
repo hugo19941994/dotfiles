@@ -1,0 +1,10 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.config/nvim: nvim/
+    ~/.config/mpv: mpv/
+    ~/.config/terminator: nvim/
+    ~/.zshrc: zsh/zshrc
+    ~/.antigen.zsh: zsh/antigen
+    ~/.ycm_extra_conf.py: ycm_extra_conf.py
