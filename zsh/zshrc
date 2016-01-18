@@ -21,4 +21,13 @@ antigen bundle zsh-users/zsh-history-substring-search
 
 antigen apply
 
+if [ -d "/opt/ros/indigo" ]; then
+    source /opt/ros/indigo/setup.zsh
+fi
+
+if [ -d "$PATH:$HOME/.rvm/bin" ]; then
+    export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+fi
+
+
 eval `keychain --eval --quiet --agents ssh id_ed25519`
