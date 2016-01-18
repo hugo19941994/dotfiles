@@ -20,3 +20,5 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
 
 antigen apply
+
+eval `keychain --eval --quiet --agents ssh id_ed25519`

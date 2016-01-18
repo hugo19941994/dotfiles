@@ -21,6 +21,7 @@ Plug 'elzr/vim-json'
 Plug 'nono/jquery.vim'
 Plug 'moll/vim-node'
 Plug 'LaTeX-Box-Team/LaTeX-Box'
+Plug 'klen/python-mode'
 call plug#end()
 
 " ### Vim Settings ###
