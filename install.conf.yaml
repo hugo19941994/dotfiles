@@ -4,6 +4,8 @@
     ~/.config/nvim: nvim/
     ~/.config/mpv: mpv/
     ~/.config/terminator: terminator/
-    ~/.zshrc: zsh/zshrc
-    ~/.antigen.zsh: zsh/antigen
-    ~/.ycm_extra_conf.py: ycm_extra_conf.py
+    ~/.config/git: git/
+    ~/.config/mutt: mutt/
+    ~/.config/zsh: zsh/
+    ~/.zshenv: zsh/.zshenv
+    ~/.ssh/config: ssh/config
