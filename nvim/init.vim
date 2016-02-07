@@ -2,7 +2,8 @@
 call plug#begin()
 Plug 'tomasr/molokai'
 Plug 'scrooloose/nerdtree'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'cohama/lexima.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'kien/ctrlp.vim'
