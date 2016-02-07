@@ -9,19 +9,15 @@ set imap_pass = $my_mutt_pwd
 
 set spoolfile = imaps://imap.gmail.com/INBOX
 set folder = imaps://imap.gmail.com/
-set record="imaps://imap.gmail.com/[Gmail]/Sent Mail"
-set postponed="imaps://imap.gmail.com/[Gmail]/Drafts"
+set record = "imaps://imap.gmail.com/[Gmail]/Sent Mail"
+set postponed = "imaps://imap.gmail.com/[Gmail]/Drafts"
 
-set record=""
+set record = ""
+set mbox = "imaps://imap.gmail.com/[Gmail]/All Mail"
 
-set mbox="imaps://imap.gmail.com/[Gmail]/All Mail"
-set mailcap_path    = ~/.mutt/mailcap
+auto_view text/html
 
-auto_view text/html                                      # view html automatically
-#alternative_order text/plain text/enriched text/html     # save html for last
-
-# mutt color scheme
-
+# http://cinderwick.ca/files/linux/configs/myDeskSnapshots/200912-molokai/mutt/colors.molokai
 color   normal      default default             # default colours
 color   index       red default ~N              # new messages
 color   index       green default ~F            # flagged messages
