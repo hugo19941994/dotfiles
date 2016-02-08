@@ -6,6 +6,7 @@
     ~/.config/terminator: terminator/
     ~/.config/git: git/
     ~/.config/mutt: mutt/
+    ~/.config/sway: sway/
     ~/.config/zsh: zsh/
     ~/.zshenv: zsh/.zshenv
     ~/.ssh/config: ssh/config
