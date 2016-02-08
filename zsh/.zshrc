@@ -1,6 +1,7 @@
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
+export VISUAL="nvim"
 
 export ADOTDIR="$XDG_DATA_HOME/zsh/antigen"
 export HISTFILE="$XDG_DATA_HOME/zsh/history"
