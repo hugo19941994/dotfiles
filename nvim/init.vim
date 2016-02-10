@@ -1,6 +1,7 @@
 " ### vim-plug ###
 call plug#begin()
 Plug 'tomasr/molokai'
+Plug 'nanotech/jellybeans.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -52,7 +53,7 @@ set ai
 set laststatus=2
 
 " ### Plugin Settings ###
-colorscheme molokai
+colorscheme jellybeans
 
 let g:ycm_global_ycm_extra_conf = "~/.config/nvim/ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf = 0

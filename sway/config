@@ -14,7 +14,7 @@ set $mod Mod4
 # Your preferred terminal emulator
 set $term terminator
 # Your preferred application launcher
-set $menu dmenu_run
+set $menu dmenu_run -h 21 -w 1366
 
 ### Output configuration
 #
@@ -153,9 +153,7 @@ bar {
         }
 }
 
-for_window [class="^.*"] border pixel 0
 gaps inner 5
-gapps outer 0
 exec --no-startup-id setxkbmap gb
 
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%

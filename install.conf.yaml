@@ -7,6 +7,7 @@
     ~/.config/git: git/
     ~/.config/mutt: mutt/
     ~/.config/sway: sway/
+    ~/.config/X11: X11/
     ~/.config/zsh: zsh/
     ~/.zshenv: zsh/.zshenv
     ~/.ssh/config: ssh/config
