@@ -1,16 +1,20 @@
 - clean: ['~']
 
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+
 - link:
     ~/.config/nvim: nvim/
     ~/.config/mpv: mpv/
-    ~/.config/terminator: terminator/
+    ~/.config/mpv/scripts/stats.lua: mpv/mpv-stats/stats.lua
     ~/.config/git: git/
     ~/.config/mutt: mutt/
     ~/.config/sway: sway/
+    ~/.config/i3blocks: i3blocks/
+    ~/.config/ranger: ranger/
     ~/.config/X11: X11/
     ~/.config/zsh: zsh/
+    ~/.irssi: irssi/
     ~/.zshenv: zsh/.zshenv
     ~/.ssh/config: ssh/config
 
-- shell:
-  - [git submodule update --init --recursive, Installing submodules]

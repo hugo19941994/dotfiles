@@ -1,4 +1,16 @@
 nvim/plugged/
 nvim/undo/
 nvim/ycm_extra_conf.pyc
+
 zsh/.zcompdump
+
+.ropeproject/
+__pycache__/
+__init__.py
+
+ranger/bookmarks
+ranger/history
+ranger/scope.sh
+ranger/tagged
+
+mpv/scripts/stats.lua

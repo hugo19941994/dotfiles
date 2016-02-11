@@ -3,4 +3,7 @@
 	url = https://github.com/anishathalye/dotbot
 [submodule "zsh/antigen"]
 	path = zsh/antigen
-	url = git@github.com:zsh-users/antigen.git
+    url = https://github.com/zsh-users/antigen.git
+[submodule "mpv/mpv-stats"]
+	path = mpv/mpv-stats
+	url = https://github.com/Argon-/mpv-stats.git
