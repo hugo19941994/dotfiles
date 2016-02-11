@@ -12,9 +12,9 @@
     ~/.config/sway: sway/
     ~/.config/i3blocks: i3blocks/
     ~/.config/ranger: ranger/
-    ~/.config/X11: X11/
+    ~/.Xdefaults: urxvt/Xdefaults
     ~/.config/zsh: zsh/
     ~/.irssi: irssi/
-    ~/.zshenv: zsh/.zshenv
+    ~/.zshenv: zsh/zshenv
     ~/.ssh/config: ssh/config
 

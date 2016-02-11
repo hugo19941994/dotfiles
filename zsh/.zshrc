@@ -40,5 +40,3 @@ fi
 
 eval `keychain --eval --quiet --agents ssh id_ed25519`
 
-nohup python $XDG_CONFIG_HOME/youtube-mpv/ytdl-server.py3 > /dev/null 2>&1 &
-

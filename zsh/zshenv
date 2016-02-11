@@ -15,4 +15,3 @@ export LESSHISTFILE="$XDG_CACHE_HOME/less/history"
 export GOPATH=~/.go
 hash gimp 2>/dev/null && export GIMP2_DIRECTORY="$XDG_CONFIG_HOME/gimp"
 
-xrdb -load .config/X11/xresources
