@@ -4,7 +4,7 @@ URxvt*font: xft:gohufont:pixelsize=14
 
 URxvt.scrollBar: false
 
-URxvt.perl-ext-common: default,matcher
+URxvt.perl-ext-common: default,matcher,tabbed
 URxvt.url-launcher: /bin/chromium
 URxvt.matcher.button: 1
 
@@ -37,3 +37,10 @@ urxvt.color14: #80bfaf
 !urxvt.color15: #e8e8d3
 urxvt.color7: #ffffff
 urxvt.color15: #e8e8d3
+
+URxvt.tabbed.tabbar-fg: 2
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg: 3
+URxvt.tabbed.tab-bg: 0
+Urxvt.tabbed.new-button: no
+Urxvt.tabbed.title: no
