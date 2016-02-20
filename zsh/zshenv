@@ -13,5 +13,6 @@ export HISTFILE="$XDG_DATA_HOME/zsh/history"
 export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
 export LESSHISTFILE="$XDG_CACHE_HOME/less/history"
 export GOPATH=~/.go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 hash gimp 2>/dev/null && export GIMP2_DIRECTORY="$XDG_CONFIG_HOME/gimp"
 

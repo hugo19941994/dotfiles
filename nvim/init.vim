@@ -1,6 +1,5 @@
 " ### vim-plug ###
 call plug#begin()
-Plug 'tomasr/molokai'
 Plug 'nanotech/jellybeans.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
@@ -10,10 +9,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
-Plug 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'                 " Requires cpplint, pylint
 Plug 'scrooloose/nerdcommenter'
-Plug 'marijnh/tern_for_vim'
-Plug 'Valloric/YouCompleteMe'
+Plug 'marijnh/tern_for_vim', { 'do': 'npm install' } " Requires nodejs & npm
 Plug 'pangloss/vim-javascript'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-repeat'
@@ -22,8 +20,15 @@ Plug 'othree/html5.vim'
 Plug 'elzr/vim-json'
 Plug 'nono/jquery.vim'
 Plug 'moll/vim-node'
-Plug 'LaTeX-Box-Team/LaTeX-Box'
+Plug 'LaTeX-Box-Team/LaTeX-Box'             " LaTeX utilities
 Plug 'klen/python-mode'
+Plug 'ervandew/supertab'
+Plug 'terryma/vim-multiple-cursors'         " Sublime style multiple cursors
+Plug 'Shougo/deoplete.nvim'					" Async Code Completion Engine
+Plug 'Rip-Rip/clang_complete'				" Deoplete C/C++ sources
+Plug 'Shougo/vimproc.vim', {'do': 'make'}
+Plug 'zchee/deoplete-jedi'					" Deoplete Python sources, requires jedi
+Plug 'zchee/deoplete-go', { 'do': 'make'}	" Deoplete Go sources, required Gocode
 call plug#end()
 
 " ### Vim Settings ###
@@ -33,10 +38,9 @@ syntax on
 set undofile
 set undodir=~/.config/nvim/undo
 set noswapfile
-set wildmode=longest,list,full
 set wildmenu
+set wildmode=longest,list,full
 set ignorecase
-set smartcase
 set gdefault
 set showmatch
 set backspace=indent,eol,start
@@ -51,23 +55,23 @@ set smarttab
 set expandtab
 set ai
 set laststatus=2
+set completeopt-=preview
 
 " ### Plugin Settings ###
 colorscheme jellybeans
 
-let g:ycm_global_ycm_extra_conf = "~/.config/nvim/ycm_extra_conf.py"
-let g:ycm_confirm_extra_conf = 0
+let g:deoplete#enable_at_startup = 1
+let g:clang_complete_auto = 0
+let g:clang_auto_select = 0
+let g:clang_omnicppcomplete_compliance = 0
+let g:clang_make_default_keymappings = 0
+let g:clang_use_library = 1
 
-let g:rehash256 = 1
+" Disable Python Mode autocompletion
+let g:pymode_rope_completion = 0
+let g:pymode_rope_complete_on_dot = 0
 
-let g:nerdtree_open_on_console_startup=0
-
-let delimitMate_autoclose = 1
-
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_guide_size = 1
-let g:indent_guides_start_level = 2
-
+let g:syntastic_check_on_open = 1
 let g:syntastic_cpp_cpplint_exec='/usr/bin/cpplint'
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_compiler = 'clang++'
