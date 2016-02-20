@@ -1,5 +1,6 @@
 nvim/plugged/
 nvim/undo/
+nvim/.init.vim-rplugin~
 
 zsh/.zcompdump
 
