@@ -27,7 +27,7 @@ Plug 'LaTeX-Box-Team/LaTeX-Box'             " LaTeX utilities
 Plug 'klen/python-mode'
 " # Completion & lint
 Plug 'Shougo/deoplete.nvim'					" Async Code Completion Engine
-Plug 'Rip-Rip/clang_complete'				" Deoplete C/C++ sources
+Plug 'zchee/deoplete-clang'                 " Clang sources for Deoplete
 Plug 'zchee/deoplete-jedi'					" Deoplete Python sources, requires jedi
 Plug 'zchee/deoplete-go', { 'do': 'make'}	" Deoplete Go sources, required Gocode
 Plug 'Shougo/neoinclude.vim'                " Deoplete #include source
@@ -67,14 +67,7 @@ set completeopt-=preview
 colorscheme jellybeans
 
 let g:deoplete#enable_at_startup = 1
-let g:clang_complete_auto = 0
-let g:clang_auto_select = 0
-let g:clang_omnicppcomplete_compliance = 0
-let g:clang_make_default_keymappings = 0
-let g:clang_use_library = 1 " Accelerates clang_complete
-
-let g:clang_snippets = 1
-let g:clang_snippets_engine = 'ultisnips'
+let g:deoplete#sources#clang#flags = ['-x', 'c++', '-std=c++14']
 
 " Disable Python Mode autocompletion
 let g:pymode_rope_completion = 0
