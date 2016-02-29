@@ -1,5 +1,6 @@
 alias mutt="mutt -F $XDG_CONFIG_HOME/mutt/muttrc"
 alias xsel="xsel --logfile $XDG_CACHE_HOME/xsel/xsel.log"
+alias ncmpcpp='ncmpcpp -c "$XDG_CONFIG_HOME"/ncmpcpp/config'
 alias rm="rm -i"
 alias vi="nvim"
 alias vim="nvim"
