@@ -38,9 +38,9 @@ urxvt.color14: #80bfaf
 urxvt.color7: #ffffff
 urxvt.color15: #e8e8d3
 
-URxvt.tabbed.tabbar-fg: 2
-URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tabbar-fg: 1
+URxvt.tabbed.tabbar-bg: -1
 URxvt.tabbed.tab-fg: 3
-URxvt.tabbed.tab-bg: 0
+URxvt.tabbed.tab-bg: -1
 Urxvt.tabbed.new-button: no
 Urxvt.tabbed.title: no
