@@ -74,13 +74,13 @@ let g:pymode_rope_completion = 0
 let g:pymode_rope_complete_on_dot = 0
 
 let g:syntastic_check_on_open = 1
-let g:syntastic_cpp_cpplint_exec='/usr/bin/cpplint'
+let g:syntastic_cpp_cpplint_exec = '/usr/bin/cpplint'
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = '-std=c++14'
 let g:syntastic_cpp_checkers = ['cpplint']
 
-let g:airline_theme="jellybeans"
+let g:airline_theme = "jellybeans"
 let g:airline_left_alt_sep = ' | '
 let g:airline_left_sep = ''
 let g:airline_right_alt_sep = ' | '

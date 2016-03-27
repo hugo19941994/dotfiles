@@ -9,6 +9,8 @@ source "$XDG_CONFIG_HOME/zsh/antigen/antigen.zsh"
 antigen use oh-my-zsh
 antigen bundle git
 antigen bundle pip
+antigen bundle safe-paste
+antigen bundle pass
 antigen bundle vi-mode
 antigen bundle tarruda/zsh-autosuggestions
 antigen bundle horosgrisa/autoenv
@@ -30,14 +32,32 @@ bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
 #zsh-autosuggestions
-source $ADOTDIR/repos/https-COLON--SLASH--SLASH-github.com-SLASH-tarruda-SLASH-zsh-autosuggestions.git/dist/autosuggestions.zsh
 ZSH_AUTOSUGGEST_CLEAR_WIDGETS=("${(@)ZSH_AUTOSUGGEST_CLEAR_WIDGETS:#(up|down)-line-or-history}")
 ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(history-substring-search-up history-substring-search-down)
-autosuggest_start
 
 if [ -d "$PATH:$HOME/.rvm/bin" ]; then
     export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 fi
 
-eval `keychain --eval --quiet --agents ssh id_ed25519`
+#eval `keychain --eval --quiet --agents ssh id_ed25519`
 
+# Start the gpg-agent if not already running
+if ! pgrep -x -u "${USER}" gpg-agent >/dev/null 2>&1; then
+  gpg-connect-agent /bye >/dev/null 2>&1
+fi
+
+# Set SSH to use gpg-agent
+unset SSH_AGENT_PID
+if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+  export SSH_AUTH_SOCK="${HOME}/.config/gnupg/S.gpg-agent.ssh"
+fi
+
+# Set GPG TTY
+export GPG_TTY=$(tty)
+
+# Refresh gpg-agent tty in case user switches into an X session
+gpg-connect-agent updatestartuptty /bye >/dev/null
+
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+    ssh-add ~/.ssh/id_ed25519
+fi
