@@ -19,6 +19,7 @@ instance=Master
 interval=5
 signal=10
 separator=true
+color=#D3A94A
 
 # Network interface monitoring
 #
@@ -29,6 +30,7 @@ separator=true
 #color=#00FF00
 interval=10
 separator=true
+color=#5778C1
 
 [wifi]
 instance=wlp3s0
@@ -39,6 +41,7 @@ separator=true
 # The battery instance defaults to 0.
 [battery]
 label=BAT
+color=#CA674A
 #label=⚡
 #instance=1
 interval=30
@@ -47,6 +50,7 @@ interval=30
 [time]
 command=date '+%d-%m-%Y %H:%M'
 interval=1
+color=#A9A9A9
 
 # Generic media player support
 #

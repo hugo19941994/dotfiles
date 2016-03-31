@@ -293,7 +293,6 @@ statusbar = {
     awl_0 = {
       items = {
         barstart = { priority = "100"; };
-        usercount = { };
         awl_0 = { };
         barend = { priority = "100"; alignment = "right"; };
       };
@@ -301,7 +300,11 @@ statusbar = {
   };
 };
 settings = {
-  core = { real_name = "yourname"; user_name = "yourname"; nick = "yourname"; };
+  core = {
+    real_name = "Hugo";
+    user_name = "mdmga";
+    nick = "mdmga";
+  };
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = { theme = "weed"; };
   "perl/core/scripts" = {
@@ -322,5 +325,14 @@ settings = {
     awl_sbar_maxlength = "yes";
     awl_separator = "%N %N";
     awl_sort = "refnum";
+    neat_colors = "X30rRX61X6CX3CyX1DcCBX3HX2AbMX3AX42X6M";
+    awl_shared_sbar = "OFF";
   };
 };
+ignores = (
+  { mask = "JOINS"; level = "ALL"; },
+  { mask = "PARTS"; level = "ALL"; },
+  { mask = "QUITS"; level = "ALL"; },
+  { mask = "NICKS"; level = "ALL"; },
+  { level = "JOINS PARTS QUITS NICKS"; }
+);

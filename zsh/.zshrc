@@ -19,9 +19,7 @@ antigen bundle srijanshetty/zsh-pandoc-completion
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
-
 antigen theme minimal
-
 antigen apply
 
 #zsh-history-substring-search
@@ -34,12 +32,6 @@ bindkey -M vicmd 'j' history-substring-search-down
 #zsh-autosuggestions
 ZSH_AUTOSUGGEST_CLEAR_WIDGETS=("${(@)ZSH_AUTOSUGGEST_CLEAR_WIDGETS:#(up|down)-line-or-history}")
 ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(history-substring-search-up history-substring-search-down)
-
-if [ -d "$PATH:$HOME/.rvm/bin" ]; then
-    export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-fi
-
-#eval `keychain --eval --quiet --agents ssh id_ed25519`
 
 # Start the gpg-agent if not already running
 if ! pgrep -x -u "${USER}" gpg-agent >/dev/null 2>&1; then
