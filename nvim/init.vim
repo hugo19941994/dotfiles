@@ -15,6 +15,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-repeat'
 Plug 'terryma/vim-multiple-cursors'         " Sublime style multiple cursors
+Plug 'tpope/vim-obsession'
 " # Languages
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }    " Requires nodejs & npm
 Plug 'pangloss/vim-javascript'
