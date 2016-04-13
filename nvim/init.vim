@@ -25,11 +25,16 @@ Plug 'nono/jquery.vim'
 Plug 'moll/vim-node'
 Plug 'LaTeX-Box-Team/LaTeX-Box'             " LaTeX utilities
 Plug 'klen/python-mode'
+Plug 'Quramy/tsuquyomi'                     " Typescript
+Plug 'leafgarland/typescript-vim'           " Typescript syntax
+Plug 'jason0x43/vim-js-indent'              " Typescript indenting
 " # Completion & lint
 Plug 'Shougo/deoplete.nvim'					" Async Code Completion Engine
+Plug 'Shougo/vimproc', { 'do' : 'make' }
 Plug 'zchee/deoplete-clang'                 " Clang sources for Deoplete
 Plug 'zchee/deoplete-jedi'					" Deoplete Python sources, requires jedi
 Plug 'zchee/deoplete-go', { 'do': 'make'}	" Deoplete Go sources, required Gocode
+Plug 'mhartington/deoplete-typescript'
 Plug 'Shougo/neoinclude.vim'                " Deoplete #include source
 Plug 'Shougo/neco-vim'                      " Deoplete vim source
 Plug 'scrooloose/syntastic'                 " Requires cpplint, pylint
@@ -79,9 +84,16 @@ let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = '-std=c++14'
 let g:syntastic_cpp_checkers = ['cpplint']
+let g:syntastic_typescript_tsc_fname = ''   "Workaround to check tsconfig.json
 
 let g:airline_theme = "jellybeans"
 let g:airline_left_alt_sep = ' | '
 let g:airline_left_sep = ''
 let g:airline_right_alt_sep = ' | '
 let g:airline_right_sep = ''
+
+" Close quickfix window automatically
+aug QFClose
+  au!
+  au WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&buftype") == "quickfix"|q|endif
+aug END

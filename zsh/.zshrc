@@ -53,3 +53,7 @@ gpg-connect-agent updatestartuptty /bye >/dev/null
 if [ -z "$SSH_AUTH_SOCK" ] ; then
     ssh-add ~/.ssh/id_ed25519
 fi
+
+# NVM
+export NVM_DIR="/home/hfs/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

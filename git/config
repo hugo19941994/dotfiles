@@ -1,5 +1,8 @@
 [user]
 	email = hugoseage@gmail.com
 	name = Hugo Ferrando Seage
+	signingkey = 6CFF4486
 [push]
 	default = simple
+[commit]
+	gpgsign = true

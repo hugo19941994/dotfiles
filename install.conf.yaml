@@ -16,7 +16,12 @@
     ~/.config/ranger: ranger/
     ~/.Xdefaults: urxvt/Xdefaults
     ~/.config/zsh: zsh/
-    ~/.irssi: irssi/
     ~/.zshenv: zsh/zshenv
+    ~/.irssi: irssi/
     ~/.ssh/config: ssh/config
+    ~/.gnupg/dirmngr.conf: gnupg/dirmngr.conf
+    ~/.gnupg/gpg-agent.conf: gnupg/gpg-agent.conf
+    ~/.gnupg/gpg.conf: gnupg/gpg.conf
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/.tmux: tmux/tmux/
 
