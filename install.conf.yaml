@@ -8,7 +8,7 @@
 - link:
     ~/.config/nvim: nvim/
     ~/.config/mpv: mpv/
-    ~/.config/ncmpcpp: ncmpcpp
+    ~/.ncmpcpp: ncmpcpp
     ~/.config/mpv/scripts/stats.lua: mpv/mpv-stats/stats.lua
     ~/.config/git: git/
     ~/.config/mutt: mutt/

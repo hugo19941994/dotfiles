@@ -4,7 +4,7 @@ set imap_pass = $my_pw_hugofs
 set spoolfile = imaps://mail.hugofs.com:993/INBOX
 set folder = imaps://mail.hugofs.com:993/
 
-set record = ""
+set record = "imaps://mail.hugofs.com:993/Sent"
 
 set realname = 'Hugo Ferrando Seage'
 set from = 'hugo@hugofs.com'

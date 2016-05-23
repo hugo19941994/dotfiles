@@ -98,3 +98,6 @@ aug QFClose
   au!
   au WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&buftype") == "quickfix"|q|endif
 aug END
+
+autocmd FileType typescript set tabstop=2|set shiftwidth=2|set expandtab
+
