@@ -1,22 +1,24 @@
-" ### vim-plug ###
+" vim-plug
 call plug#begin()
 " # Interface
 Plug 'nanotech/jellybeans.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" # Motions, tools
+" Motions, tools
 Plug 'easymotion/vim-easymotion'
 Plug 'cohama/lexima.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
+Plug 'sgur/vim-lazygutter'                  " lazy-loading version of vim-gutter
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-repeat'
 Plug 'terryma/vim-multiple-cursors'         " Sublime style multiple cursors
 Plug 'tpope/vim-obsession'
-" # Languages
+Plug 'alvan/vim-closetag'                   " Auto close html tags
+Plug 'editorconfig/editorconfig-vim'        " Change vim settings depending on .editorconfig
+" Languages
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }    " Requires nodejs & npm
 Plug 'pangloss/vim-javascript'
 Plug 'fatih/vim-go'
@@ -29,7 +31,10 @@ Plug 'klen/python-mode'
 Plug 'Quramy/tsuquyomi'                     " Typescript
 Plug 'leafgarland/typescript-vim'           " Typescript syntax
 Plug 'jason0x43/vim-js-indent'              " Typescript indenting
-" # Completion & lint
+" Completion & lint
+function! DoRemote(arg)
+  UpdateRemotePlugins
+endfunction
 Plug 'Shougo/deoplete.nvim'					" Async Code Completion Engine
 Plug 'Shougo/vimproc', { 'do' : 'make' }
 Plug 'zchee/deoplete-clang'                 " Clang sources for Deoplete
@@ -43,7 +48,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 call plug#end()
 
-" ### Vim Settings ###
+" Vim Settings
 filetype plugin indent on
 syntax on
 
@@ -69,7 +74,7 @@ set ai
 set laststatus=2
 set completeopt-=preview
 
-" ### Plugin Settings ###
+" Plugin Settings
 colorscheme jellybeans
 
 let g:deoplete#enable_at_startup = 1
@@ -85,13 +90,18 @@ let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = '-std=c++14'
 let g:syntastic_cpp_checkers = ['cpplint']
-let g:syntastic_typescript_tsc_fname = ''   "Workaround to check tsconfig.json
+let g:tsuquyomi_disable_quickfix = 1
+let g:syntastic_typescript_checkers = ['tsuquyomi']
+let g:syntastic_typescript_tsc_fname = ''
 
 let g:airline_theme = "jellybeans"
 let g:airline_left_alt_sep = ' | '
 let g:airline_left_sep = ''
 let g:airline_right_alt_sep = ' | '
 let g:airline_right_sep = ''
+
+" HTML should be indented using two spaces
+autocmd Filetype html setlocal ts=2 sts=2 sw=2
 
 " Close quickfix window automatically
 aug QFClose
