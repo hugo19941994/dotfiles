@@ -1,1 +1,3 @@
+# TODO - w3m with images or chrome with images
+# TODO - Open oter types of files
 text/html; chromium %s; test=test -n "$DISPLAY"; needsterminal
