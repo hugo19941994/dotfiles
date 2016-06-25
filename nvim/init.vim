@@ -74,6 +74,8 @@ set ai
 set laststatus=2
 set completeopt-=preview
 
+set clipboard=unnamedplus
+
 " Plugin Settings
 colorscheme jellybeans
 
@@ -93,6 +95,7 @@ let g:syntastic_cpp_checkers = ['cpplint']
 let g:tsuquyomi_disable_quickfix = 1
 let g:syntastic_typescript_checkers = ['tsuquyomi']
 let g:syntastic_typescript_tsc_fname = ''
+let g:syntastic_html_tidy_ignore_errors = ['proprietary attribute']
 
 let g:airline_theme = "jellybeans"
 let g:airline_left_alt_sep = ' | '
