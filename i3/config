@@ -91,6 +91,7 @@ bindsym $mod+space focus mode_toggle
 # switch between keyboard layouts
 bindsym $mod+o exec --no-startup-id setxkbmap gb
 bindsym $mod+i exec --no-startup-id setxkbmap es
+bindsym $mod+u exec --no-startup-id setxkbmap us
 
 # focus the parent container
 bindsym $mod+a focus parent
