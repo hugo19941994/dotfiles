@@ -2,6 +2,7 @@
 
 URxvt*font: xft:gohufont:pixelsize=14
 
+URxvt.saveLines: 10000
 URxvt.scrollBar: false
 
 ! URxvt.perl-ext-common: default,matcher,tabbed
