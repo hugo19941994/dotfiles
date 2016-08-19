@@ -46,6 +46,7 @@ Plug 'Shougo/neco-vim'                      " Deoplete vim source
 Plug 'scrooloose/syntastic'                 " Requires cpplint, pylint
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'jamessan/vim-gnupg'
 call plug#end()
 
 " Vim Settings

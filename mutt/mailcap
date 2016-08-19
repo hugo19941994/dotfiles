@@ -1,3 +1,4 @@
-# TODO - w3m with images or chrome with images
-# TODO - Open oter types of files
-text/html; chromium %s; test=test -n "$DISPLAY"; needsterminal
+#If $DISPLAY is set, use X-based counterparts
+text/html; firefox %s; test=test -n "$DISPLAY"; edit=nvim; compose=nvim; nametemplate=%s.html
+#Fallback if X isn't available
+text/html; w3m -v -F -T text/html %s; edit=nvim; compose=nvim; nametemplate=%s.html; needsterminal

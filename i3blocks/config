@@ -14,7 +14,6 @@ color=#71B9F8
 [separator]
 
 [volume]
-label=&#xf028;
 instance=Master
 interval=1
 signal=10

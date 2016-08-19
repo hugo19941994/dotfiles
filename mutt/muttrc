@@ -1,42 +1,38 @@
-set header_cache = $XDG_CACHE_HOME/mutt/headers
-set message_cachedir = $XDG_DATA_HOME/mutt/messages
-set mailcap_path = $XDG_CONFIG_HOME/mutt/mailcap
-set record = $XDG_DATA_HOME/mutt/record/sent
-set header_cache = $XDG_CACHE_HOME/mutt
-set message_cachedir = $XDG_CACHE_HOME/mutt
-set imap_keepalive = 300
-set mail_check = 30
+set header_cache        = $XDG_CACHE_HOME/mutt/headers
+set message_cachedir    = $XDG_DATA_HOME/mutt/messages
+set mailcap_path        = $XDG_CONFIG_HOME/mutt/mailcap
+set record              = $XDG_DATA_HOME/mutt/record/sent
+set header_cache        = $XDG_CACHE_HOME/mutt
+set message_cachedir    = $XDG_CACHE_HOME/mutt
+set signature           = $XDG_CONFIG_HOME/mutt/signature
+set query_command       = "pc_query '%s'"
+#set query_command      = "goobook query '%s'"
+set realname            = "Hugo Ferrando Seage"
+set imap_keepalive      = 60
+set mail_check          = 30
+set imap_idle           = yes
+set ssl_force_tls       = yes
+set ssl_starttls        = yes
+set ssl_use_sslv2       = no
+set ssl_use_sslv3       = no
+set ssl_use_tlsv1       = no
+set ssl_use_tlsv1_1     = no
+set ssl_use_tlsv1_2     = yes
+set ssl_verify_dates    = yes
+set ssl_verify_host     = yes
 
 source $XDG_CONFIG_HOME/mutt/gmail
+source "$XDG_CONFIG_HOME/mutt/gpg.rc"
 
 macro index,pager <f2> '<sync-mailbox><enter-command>source $XDG_CONFIG_HOME/mutt/gmail<enter><change-folder>imaps://imap.gmail.com<enter>'
 macro index,pager <f3> '<sync-mailbox><enter-command>source $XDG_CONFIG_HOME/mutt/hugofs<enter><change-folder>imaps://mail.hugofs.com<enter>'
-#macro index 'c' '<change-folder>?<change-dir><home>^K=<enter>'
+macro index,pager <f4> '<sync-mailbox><enter-command>source $XDG_CONFIG_HOME/mutt/uem<enter><change-folder>imaps://outlook.office365.com<enter>'
 
-source "$XDG_CONFIG_HOME/mutt/gpg.rc"
+auto_view           text/html
+alternative_order   text/plain text/enriched text/html
 
-set signature = "$XDG_CONFIG_HOME/mutt/signature"
-
-auto_view text/html
-alternative_order text/plain text/enriched text/html
 bind attach <return> view-mailcap
-
-set query_command="goobook query '%s'"
 bind editor <Tab> complete-query
-
-#set sidebar_visible = yes
-#set sidebar_sort = yes
-#set sidebar_shortpath = yes
-#set sidebar_width=25
-#set sidebar_delim='|'
-#bind index,pager \CP sidebar-prev
-#bind index,pager \CN sidebar-next
-#bind index,pager \CO sidebar-open
-
-#set imap_check_subscribed = yes
-
-#macro index b '<enter-command>toggle sidebar_visible<enter><refresh>'
-#macro pager b '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
 
 # http://cinderwick.ca/files/linux/configs/myDeskSnapshots/200912-molokai/mutt/colors.molokai
 color   normal      default default             # default colours
