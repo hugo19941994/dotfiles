@@ -15,8 +15,9 @@
     ~/.config/i3: i3/
     ~/.config/i3blocks: i3blocks/
     ~/.config/ranger: ranger/
-    ~/.Xdefaults: urxvt/Xdefaults
     ~/.config/zsh: zsh/
+    ~/.config/pycard: pycard/
+    ~/.Xdefaults: urxvt/Xdefaults
     ~/.zshenv: zsh/zshenv
     ~/.irssi: irssi/
     ~/.ssh/config: ssh/config
