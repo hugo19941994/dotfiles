@@ -14,5 +14,3 @@ set use_from        = yes
 
 set smtp_url        = 'smtp://21408151@live.uem.es@smtp.office365.com:587/'
 set smtp_pass       = $my_pw_uem
-
-unmailboxes *

@@ -11,5 +11,3 @@ set use_from        = yes
 
 set smtp_url        = 'smtp://hugo@mail.hugofs.com:587/'
 set smtp_pass       = $my_pw_hugofs
-
-unmailboxes *

@@ -1,8 +1,0 @@
-//192.168.1.39/Hugo /media/Ibuki cifs credentials=/etc/IbukiCredentials,x-systemd.automount,noauto 0 0
-
-hugo@hugofs.com:/home/hugo /media/hugofs.com  fuse.sshfs noauto,x-systemd.automount,_netdev,users,idmap=user,IdentityFile=/home/hfs/.ssh/id_rsa,allow_other,reconnect,noauto 0 0
-
-hugo@10.8.0.1:/home/hugo /media/VPN-hugofs.com  fuse.sshfs noauto,x-systemd.automount,_netdev,users,idmap=user,IdentityFile=/home/hfs/.ssh/id_rsa,allow_other,reconnect,noauto 0 0
-
-jmtpfs /media/android fuse nodev,x-systemd.automount,allow_other,rw,users,noauto,noatime,uid=1000,gid=1000    0    0
-

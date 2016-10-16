@@ -13,5 +13,3 @@ set use_from        = yes
 
 set smtp_url        = 'smtp://hugoseage@smtp.gmail.com:587/'
 set smtp_pass       = $my_pw_gmail
-
-unmailboxes *

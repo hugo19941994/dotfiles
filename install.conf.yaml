@@ -13,6 +13,7 @@
     ~/.config/git: git/
     ~/.config/mutt: mutt/
     ~/.config/i3: i3/
+    ~/.config/sway: sway/
     ~/.config/i3blocks: i3blocks/
     ~/.config/ranger: ranger/
     ~/.config/zsh: zsh/

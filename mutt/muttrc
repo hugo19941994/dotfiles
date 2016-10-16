@@ -8,6 +8,7 @@ set signature           = $XDG_CONFIG_HOME/mutt/signature
 set query_command       = "pc_query '%s'"
 #set query_command      = "goobook query '%s'"
 set realname            = "Hugo Ferrando Seage"
+set sidebar_visible     = no
 set imap_keepalive      = 60
 set mail_check          = 30
 set imap_idle           = yes
@@ -22,8 +23,15 @@ set ssl_verify_dates    = yes
 set ssl_verify_host     = yes
 
 source $XDG_CONFIG_HOME/mutt/gmail
-source "$XDG_CONFIG_HOME/mutt/gpg.rc"
+#source "$XDG_CONFIG_HOME/mutt/gpg.rc"
+set crypt_use_gpgme=yes
+set pgp_use_gpg_agent = yes
+set pgp_sign_as = 6CFF4486
+set pgp_timeout = 3600
+set crypt_autosign = yes
+set crypt_replyencrypt = yes
 
+macro index 'c' '<change-folder>?<change-dir><home>^K=<enter>'
 macro index,pager <f2> '<sync-mailbox><enter-command>source $XDG_CONFIG_HOME/mutt/gmail<enter><change-folder>imaps://imap.gmail.com<enter>'
 macro index,pager <f3> '<sync-mailbox><enter-command>source $XDG_CONFIG_HOME/mutt/hugofs<enter><change-folder>imaps://mail.hugofs.com<enter>'
 macro index,pager <f4> '<sync-mailbox><enter-command>source $XDG_CONFIG_HOME/mutt/uem<enter><change-folder>imaps://outlook.office365.com<enter>'
@@ -33,6 +41,11 @@ alternative_order   text/plain text/enriched text/html
 
 bind attach <return> view-mailcap
 bind editor <Tab> complete-query
+bind index,pager B sidebar-toggle-visible
+bind index,pager \CP sidebar-prev
+bind index,pager \CN sidebar-next
+bind index,pager \CO sidebar-open
+
 
 # http://cinderwick.ca/files/linux/configs/myDeskSnapshots/200912-molokai/mutt/colors.molokai
 color   normal      default default             # default colours

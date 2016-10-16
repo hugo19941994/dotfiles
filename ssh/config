@@ -5,8 +5,9 @@ Host hugofs.com ovpn.io
     User hfs
 
 Host *
-    IdentityFile ~/.ssh/id_ed25519
-    IdentityFile ~/.ssh/id_rsa
+    PKCS11Provider libsimple-tpm-pk11.so
+    #IdentityFile ~/.ssh/id_ed25519
+    #IdentityFile ~/.ssh/id_rsa
     Port 22
     Protocol 2
     SendEnv LANG LC_*

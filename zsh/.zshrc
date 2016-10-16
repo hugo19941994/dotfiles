@@ -58,4 +58,13 @@ fi
 export NVM_DIR="/home/hfs/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
+#export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
+#export JAVA_HOME="/usr/lib/jvm/java-8-openjdk/"
+export _JAVA_AWT_WM_NONREPARENTING=1
+
+export ANDROID_HOME=/home/hfs/Android/Sdk/
+export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+
+if [[ "$(tty)" == "/dev/tty1" ]] ; then
+    sway
+fi
