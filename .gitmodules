@@ -4,9 +4,3 @@
 [submodule "zsh/antigen"]
 	path = zsh/antigen
     url = https://github.com/zsh-users/antigen.git
-[submodule "mpv/mpv-stats"]
-	path = mpv/mpv-stats
-	url = https://github.com/Argon-/mpv-stats.git
-[submodule "tmux/tmux/plugins/tpm"]
-	path = tmux/tpm
-	url = https://github.com/tmux-plugins/tpm/
