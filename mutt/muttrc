@@ -8,7 +8,7 @@ set signature           = $XDG_CONFIG_HOME/mutt/signature
 set query_command       = "pc_query '%s'"
 #set query_command      = "goobook query '%s'"
 set realname            = "Hugo Ferrando Seage"
-set sidebar_visible     = no
+set sidebar_visible     = yes
 set imap_keepalive      = 60
 set mail_check          = 30
 set imap_idle           = yes
@@ -21,9 +21,10 @@ set ssl_use_tlsv1_1     = no
 set ssl_use_tlsv1_2     = yes
 set ssl_verify_dates    = yes
 set ssl_verify_host     = yes
+set imap_check_subscribed
 
-source $XDG_CONFIG_HOME/mutt/gmail
-#source "$XDG_CONFIG_HOME/mutt/gpg.rc"
+source "$XDG_CONFIG_HOME/mutt/hugofs"
+source "$XDG_CONFIG_HOME/mutt/gpg.rc"
 set crypt_use_gpgme=yes
 set pgp_use_gpg_agent = yes
 set pgp_sign_as = 6CFF4486
@@ -45,7 +46,6 @@ bind index,pager B sidebar-toggle-visible
 bind index,pager \CP sidebar-prev
 bind index,pager \CN sidebar-next
 bind index,pager \CO sidebar-open
-
 
 # http://cinderwick.ca/files/linux/configs/myDeskSnapshots/200912-molokai/mutt/colors.molokai
 color   normal      default default             # default colours

@@ -1,13 +1,8 @@
-set imap_user       = 'hugo'
+set imap_user       = 'me'
 set imap_pass       = $my_pw_hugofs
-
-set folder          = imaps://mail.hugofs.com:993/
-set spoolfile       = +INBOX
-
-set record          = +Sent
-
-set from            = 'hugo@hugofs.com'
+set from            = 'me@hugofs.com'
 set use_from        = yes
-
-set smtp_url        = 'smtp://hugo@mail.hugofs.com:587/'
-set smtp_pass       = $my_pw_hugofs
+set folder          = imaps://mail.hugofs.com:993/
+set smtp_url        = 'smtp://me@mail.hugofs.com:587/'
+set spoolfile       = +INBOX
+set record          = +Sent
