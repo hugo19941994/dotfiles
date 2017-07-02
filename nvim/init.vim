@@ -8,6 +8,7 @@ Plug 'vim-airline/vim-airline-themes'
 " Motions, tools
 Plug 'cohama/lexima.vim' " auto close parentheses
 Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-fugitive'
 Plug 'sgur/vim-lazygutter' " lazy-loading version of vim-gutter
 Plug 'tpope/vim-repeat'
 Plug 'editorconfig/editorconfig-vim'
