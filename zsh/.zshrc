@@ -22,21 +22,21 @@ antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
 
-plugins=(git pip safe-paste pass vi-mode docker)
+plugins=(git pip safe-paste pass vi-mode docker zsh-history-substring-search)
 
 antigen theme minimal
 antigen apply
 
 # zsh-history-substring-search
-zmodload zsh/terminfo
-bindkey "$terminfo[kcuu1]" history-substring-search-up
-bindkey "$terminfo[kcud1]" history-substring-search-down
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
 # zsh-autosuggestions
 ZSH_AUTOSUGGEST_CLEAR_WIDGETS=("${(@)ZSH_AUTOSUGGEST_CLEAR_WIDGETS:#(up|down)-line-or-history}")
 ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(history-substring-search-up history-substring-search-down)
+ZSH_AUTOSUGGEST_USE_ASYNC="true"
 
 OS="$(uname -s)"
 
