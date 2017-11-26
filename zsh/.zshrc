@@ -1,3 +1,6 @@
+setopt correct
+setopt auto_cd
+
 alias mutt="mutt -F $XDG_CONFIG_HOME/mutt/muttrc"
 alias xsel="xsel --logfile $XDG_CACHE_HOME/xsel/xsel.log"
 alias ncmpcpp='ncmpcpp -c "$XDG_CONFIG_HOME"/ncmpcpp/config'
@@ -13,6 +16,8 @@ antigen bundle safe-paste
 antigen bundle pass
 antigen bundle vi-mode
 antigen bundle docker
+antigen bundle colored-man-pages
+antigen bundle colorize
 antigen bundle mafredri/zsh-async
 antigen bundle tarruda/zsh-autosuggestions
 antigen bundle horosgrisa/autoenv
@@ -22,7 +27,7 @@ antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
 
-plugins=(git pip safe-paste pass vi-mode docker zsh-history-substring-search)
+plugins=(git pip safe-paste pass colorize vi-mode docker colored-man-pages zsh-history-substring-search)
 
 antigen theme minimal
 antigen apply
