@@ -82,6 +82,4 @@ let g:deoplete#sources#clang#clang_header = "/usr/local/Cellar/llvm/5.0.0/lib/cl
 " Fix switch case indentation in cpp
 :set cinoptions=l1
 
-let g:clang_format#code_style = 'google'
-let g:clang_format#style_options = {"Standard" : "C++17"}
 autocmd FileType c, cpp ClangFormatAutoEnable
