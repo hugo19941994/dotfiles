@@ -15,3 +15,6 @@ ranger/tagged
 
 mpv/scripts/stats.lua
 nvim/autoload/plug.vim.old
+
+*.pyo
+*.zwc
