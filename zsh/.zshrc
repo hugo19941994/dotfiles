@@ -77,11 +77,15 @@ if [[ ! -e /tmp/$(date +%u).sem ]] ; then
     touch /tmp/$(date +%u).sem
 
     if [ -x "$(command -v brew)" ] ; then
-        brew update && brew upgrade && brew cask upgrade
+        brew update && brew upgrade && brew upgrade --cask
     fi
 
     if [ -x "$(command -v yaourt)" ] ; then
         yaourt -Syua
+    fi
+
+    if [ -x "$(command -v yay)" ] ; then
+        yay -Syua
     fi
 
     antigen selfupdate
