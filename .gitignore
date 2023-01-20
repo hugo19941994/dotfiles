@@ -18,3 +18,5 @@ nvim/autoload/plug.vim.old
 
 *.pyo
 *.zwc
+
+.DS_Store
