@@ -8,3 +8,5 @@
     gpgsign = true
 [fetch]
     prune = true
+[pull]
+    rebase = false
