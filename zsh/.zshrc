@@ -82,6 +82,10 @@ if [[ ! -e /tmp/$(date +%u).sem ]] ; then
         yaourt -Syua
     fi
 
+    if [ -x "$(command -v yay)" ] ; then
+        yay -Syua
+    fi
+
     antigen selfupdate
     antigen update
 fi
