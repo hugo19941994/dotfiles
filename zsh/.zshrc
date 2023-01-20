@@ -27,8 +27,6 @@ antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
 
-plugins=(git pip safe-paste pass colorize vi-mode docker colored-man-pages zsh-history-substring-search)
-
 antigen theme minimal
 antigen apply
 
