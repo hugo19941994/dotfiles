@@ -70,6 +70,11 @@ if [ -x "$(command -v keychain)" ] ; then
     eval `keychain -q --inherit any --agents ssh,gpg --eval id_ed25519 6CFF4486`
 fi
 
+# Enable krew
+if [ -d "$HOME/.krew" ] ; then
+        export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+fi
+
 # Check for updates once a day
 if [[ ! -e /tmp/$(date +%u).sem ]] ; then
     touch /tmp/$(date +%u).sem
@@ -86,6 +91,11 @@ if [[ ! -e /tmp/$(date +%u).sem ]] ; then
         yay -Syua
     fi
 
+    if [ -d "$HOME/.krew" ] ; then
+        kubectl krew update
+        kubectl krew upgrade
+    fi
+
     antigen selfupdate
     antigen update
 fi
@@ -98,7 +108,6 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 export PATH="/usr/local/sbin:$PATH"
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 if [ -z "$SSH_AUTH_SOCK" ] ; then
     eval `ssh-agent -s`

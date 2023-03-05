@@ -17,6 +17,7 @@
     ~/.config/i3blocks: i3blocks/
     ~/.config/ranger: ranger/
     ~/.config/zsh: zsh/
+    ~/.zshrc: zsh/.zshrc
     ~/.config/pycard: pycard/
     ~/.Xdefaults: urxvt/Xdefaults
     ~/.zshenv: zsh/zshenv
