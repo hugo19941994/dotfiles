@@ -32,4 +32,5 @@
     ~/.gnupg/dirmngr.conf: gnupg/dirmngr.conf
     ~/.gnupg/gpg-agent.conf: gnupg/gpg-agent.conf
     ~/.gnupg/gpg.conf: gnupg/gpg.conf
+    /usr/local/bin/vpn: vpn.sh
 
