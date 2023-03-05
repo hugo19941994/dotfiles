@@ -3,6 +3,8 @@ nvim/undo/
 nvim/.init.vim-rplugin~
 
 zsh/.zcompdump
+zsh/.zsh_history
+zsh/.zsh_sessions/
 
 .ropeproject/
 __pycache__/
