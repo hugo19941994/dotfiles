@@ -4,6 +4,12 @@
   - [git submodule update --init --recursive, Installing submodules]
   - [mkdir -p ~/.gnupg]
   - [mkdir -p ~/.ssh]
+  - command: curl -L 'https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraCode.zip' -o ~/Library/Fonts/FiraCode.zip
+    if: '[ `uname` = Darwin ]'
+  - command: unzip -o ~/Library/Fonts/FiraCode.zip -d ~/Library/Fonts/
+    if: '[ `uname` = Darwin ]'
+  - command: rm ~/Library/Fonts/FiraCode.zip
+    if: '[ `uname` = Darwin ]'
 
 - link:
     ~/.config/nvim: nvim/
