@@ -1,11 +1,17 @@
-Include /Users/hfs/.colima/ssh_config
+Include ~/.orbstack/ssh/config
+
+AddKeysToAgent  yes
 
 Host hugofs.com
     User hfs
 
 Host *
+    IdentityAgent /Users/rt01121/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
     IdentityFile ~/.ssh/id_rsa
     IdentityFile ~/.ssh/id_ed25519
     VerifyHostKeyDNS yes
     HashKnownHosts yes
+
+Host *.your-storagebox.de
+   Port 23
 
