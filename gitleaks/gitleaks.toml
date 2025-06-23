@@ -1,0 +1,12 @@
+title = "Custom Gitleaks configuration"
+
+[extend]
+useDefault = true
+disabledRules = [ ]
+
+[[rules]]
+id = "presto_pwd"
+regex = '''presto://.*:(.*)@.*'''
+entropy = 3.5
+keywords = ['sqlalchemy_uri']
+

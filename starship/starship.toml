@@ -1,0 +1,59 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = false
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+[aws]
+format = '[($symbol$profile)]($style) '
+style = 'blue'
+symbol = '☁️'
+
+[git_branch]
+format = "[$branch]($style)"
+style = "bright-black"
+
+[git_status]
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
+style = "cyan"
+conflicted = "​"
+untracked = "​"
+modified = "​"
+staged = "​"
+renamed = "​"
+deleted = "​"
+stashed = "≡"
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "bright-black"
+
+[nodejs]
+disabled = true
+
+[ruby]
+disabled = true
+
+[python]
+disabled = true
+
+[golang]
+disabled = true
+
+[docker_context]
+disabled = true
+
+[kubernetes]
+disabled = false
+format = '$symbol$context '
+contexts = [
+  { context_pattern = "orbstack", style = "purple", context_alias = "local"},
+  { context_pattern = "arn:aws:eks:eu-west-1:654190527503:cluster/eng", style = "purple", context_alias = "smd"}
+]
+
+[helm]
+disabled = true
