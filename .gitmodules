@@ -2,5 +2,5 @@
     path = dotbot
     url = https://github.com/anishathalye/dotbot
 [submodule "nvim/kickstart.nvim"]
-    path = nvim/kickstart.nvim
+	path = kickstart.nvim
     url = https://github.com/nvim-lua/kickstart.nvim

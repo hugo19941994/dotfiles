@@ -1,1 +1,1 @@
-/Users/hfs/.config/dotfiles/nvim/kickstart.nvim/init.lua
+/Users/rt01121/.config/dotfiles/kickstart.nvim/init.lua
