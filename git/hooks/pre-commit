@@ -1,0 +1,5 @@
+#
+# To prevent debug code from being accidentally committed, simply add a comment near your
+# debug code containing the keyword !nocommit and this script will abort the commit.
+#
+gitleaks git --pre-commit --redact --staged --verbose --config ~/.config/gitleaks.toml --no-banner

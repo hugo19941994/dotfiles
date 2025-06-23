@@ -10,3 +10,5 @@
     prune = true
 [pull]
     rebase = false
+[core]
+    hooksPath = ~/.config/dotfiles/git/hooks/
