@@ -1,36 +1,30 @@
 - clean: ['~']
 
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
+  - [git submodule init]
+  - [git submodule update]
+  - [git submodule update --remote]
   - [mkdir -p ~/.gnupg]
   - [mkdir -p ~/.ssh]
-  - command: curl -L 'https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraCode.zip' -o ~/Library/Fonts/FiraCode.zip
-    if: '[ `uname` = Darwin ]'
-  - command: unzip -o ~/Library/Fonts/FiraCode.zip -d ~/Library/Fonts/
-    if: '[ `uname` = Darwin ]'
-  - command: rm ~/Library/Fonts/FiraCode.zip
+  - command: sudo cp macos/sudo_local /etc/pam.d/sudo_local
     if: '[ `uname` = Darwin ]'
 
 - link:
     ~/.config/nvim: nvim/
-    ~/.config/nvim/init.lua: nvim/kickstart.nvim/init.lua
+    ~/.config/nvim/init.lua: kickstart.nvim/init.lua
+    ~/.config/nvim/lua/kickstart: kickstart.nvim/lua/kickstart
     ~/.config/mpv: mpv/
-    ~/.ncmpcpp: ncmpcpp
     ~/.config/git: git/
-    ~/.config/mutt: mutt/
-    ~/.config/i3: i3/
-    ~/.config/sway: sway/
-    ~/.config/i3blocks: i3blocks/
-    ~/.config/ranger: ranger/
     ~/.config/zsh: zsh/
+    ~/.config/ghostty: ghostty/
+    ~/.config/direnv: direnv/
+    ~/.config/gitleaks.toml: gitleaks/gitleaks.toml
+    ~/.config/starship.toml: starship/starship.toml
     ~/.zshrc: zsh/.zshrc
-    ~/.config/pycard: pycard/
-    ~/.Xdefaults: urxvt/Xdefaults
-    ~/.zshenv: zsh/zshenv
+    ~/.zshenv: zsh/.zshenv
     ~/.irssi: irssi/
     ~/.ssh/config: ssh/config
     ~/.gnupg/dirmngr.conf: gnupg/dirmngr.conf
     ~/.gnupg/gpg-agent.conf: gnupg/gpg-agent.conf
     ~/.gnupg/gpg.conf: gnupg/gpg.conf
-    /usr/local/bin/vpn: vpn.sh
 
