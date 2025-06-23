@@ -1,1 +1,0 @@
-text/html; w3m -v -F -T text/html %s; edit=nvim; compose=nvim; nametemplate=%s.html; needsterminal
