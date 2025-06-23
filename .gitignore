@@ -5,6 +5,7 @@ nvim/.init.vim-rplugin~
 zsh/.zcompdump
 zsh/.zsh_history
 zsh/.zsh_sessions/
+zsh/.zsh_plugins.zsh
 
 .ropeproject/
 __pycache__/
